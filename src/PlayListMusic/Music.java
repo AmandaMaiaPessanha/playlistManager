@@ -1,16 +1,33 @@
 package PlayListMusic;
 
 public class Music {
-	String musicName;
-	String musicCompositor;
-	String musicInterpreter;
-	float musicDuration;
-	//Crie uma classe que representará uma música. Para este gerenciador,
-	//precisaremos armazenar o nome da música, seu intérprete, seu compositor e a
-	//duração da música (em minutos). Declare atributos e construtor(es) de forma a
-	//facilitar a criação de objetos desta classe.
+	String name;
+	String compositor;
+	String interpreter;
+	int durationInMinutes;
 	
 	Music (String mName, String mCompositor, String mInterpreter, int mDuration) {
-		musicName = mName; musicCompositor = mCompositor; musicInterpreter = mInterpreter; musicDuration = mDuration;
+		name = mName; compositor = mCompositor; interpreter = mInterpreter; durationInMinutes = mDuration;
 	}
+
+	public String getCompositor() {
+		return compositor;
+	}
+
+	public String getInterpreter() {
+		return interpreter;
+	}
+
+	public int getDuration() {
+		return durationInMinutes;
+	}
+	
+	public String getName() {
+		return this.name;
+	}
+	
+	@Override
+	public String toString() {
+		return "Music name = " + this.name + ", compositor = " + this.compositor + ", interpreter = " + this.interpreter + ", duration = " + this.durationInMinutes + "]";
+	}	
 }
