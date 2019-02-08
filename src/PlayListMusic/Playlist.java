@@ -4,7 +4,8 @@ public class Playlist {
 	//CARACTERÍSTICAS DA CLASSSE PLAYLIST
 	Music[] musics;
 	Video[] videos;
-	int itensCount;
+	int musicCount;
+	int videoCount;
 	int duration;
 	int propaganda;
 	
@@ -12,15 +13,16 @@ public class Playlist {
 	Playlist (){	
 		this.musics = new Music[1];
 		this.videos = new Video[1];
-		this.itensCount = 0;
+		this.musicCount = 0;
+		this.videoCount = 0;
 		this.duration = 0;
 	}
 	
 	//INSERÇÃO DA MÚSICA NA PLAYLIST
 	public void addMusic(Music music) {
-		//VERIFIca SE ESTáÁ NO TAMANHO MÁXIMO, SE SIM ADICIONA O MEU ARRAY JÁ EXISTENTE MAIS 1 POSIÇÕES
-		if (this.itensCount == this.musics.length) {
-			Music[] newMusics = new Music[this.itensCount + 1];
+		//VERIFIca SE ESTÁ NO TAMANHO MÁXIMO, SE SIM ADICIONA O MEU ARRAY JÁ EXISTENTE MAIS 1 POSIÇÕES
+		if (this.musicCount == this.musics.length) {
+			Music[] newMusics = new Music[this.musicCount + 1];
 			for (int i = 0; i < this.musics.length; i++) {
 				newMusics[i] = this.musics[i];
 			}
@@ -28,20 +30,20 @@ public class Playlist {
 		}
 		
 		//ADICIONA NOVA MÚSICA
-		this.musics[this.itensCount] = music;
+		this.musics[this.musicCount] = music;
 		
 		//ADICIONA A DURAÇÃO DA MÚSICA NA PLAYLIST
-		this.duration += music.durationInMinutes;
+		this.duration += music.getDuration();
 		
 		//INCREMENTA OPERADOR ITENSCOUNT
-		this.itensCount++;
+		this.musicCount++;
 	}
 	
 	//INSERÇÃO DE UM VÍDEO NA PLAYLIST
 	public void addVideo(Video video) {
 		//VERIFICA SE ESTÁ NO TAMANHO MÁXIMO, SE SIM ADICIONA O MEU ARRAY JÁ EXISTENTE MAIS 1 POSIÇÕES
-		if (this.itensCount == this.videos.length) {
-				Video[] newVideos = new Video[this.itensCount + 1];
+		if (this.videoCount == this.videos.length) {
+				Video[] newVideos = new Video[this.videoCount + 1];
 				for (int i = 0; i < this.videos.length; i++) {
 					newVideos[i] = this.videos[i];
 				}
@@ -49,13 +51,13 @@ public class Playlist {
 		}
 		
 		//ADICIONA NOVO VÍDEO
-		this.videos[this.itensCount] = video;
+		this.videos[this.videoCount] = video;
 		
 		//ADICIONA A DURAÇÃO DA MÚSICA NA PLAYLIST
-		this.duration += video.duration;
+		this.duration += video.getDuration();
 				
 		//INCREMENTA OPERADOR ITENSCOUNT
-		this.itensCount++;
+		this.videoCount++;
 	}
 	
 	//OBTENÇÃO DA DURAÇÃO DA PLAYLIST
@@ -81,10 +83,7 @@ public class Playlist {
 		
 		return this.propaganda;
 		
-	}
-	
-	
-	
+	}	
 	
 	//TOSTRING NO FORMATO (Xh e Ymin)
 	@Override

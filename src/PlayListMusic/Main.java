@@ -47,14 +47,15 @@ public class Main {
 		//PRINTA NA TELA AS INFORMÇÕES SOBRE CADA MPUSICA ADICIONADA
 		System.out.println(video1.toString());
 		System.out.println(video2.toString());
-		
-		//DECLARA A VARIÁVEL DA PRIMEIRA PLAYLIST E ATRIBÚI A ELA O CONSTRUTOR PLAYLIST
-		Playlist playlist2 = new Playlist();
-		
+				
 		//ADICIONA OS VÍDEOS A PLAYLIST UM A UM
-		playlist2.addVideo(video1);
-		playlist2.addVideo(video2);
+		playlist1.addVideo(video1);
+		playlist1.addVideo(video2);
+		
+		System.out.println("===================================================");		
+		System.out.print("Duração da playlist: ");
+
+		//PRINTA NA TELA O TEMPO DE DURAÇÃO DA PLAYLIST
+		System.out.println(playlist1.toString());
 	}
 }
-		
-		

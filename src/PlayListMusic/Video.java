@@ -2,11 +2,11 @@ package PlayListMusic;
 
 public class Video {
 	//CARACTERÍSTICAS DA CLASSSE VIDEO
-	String subjectMatter;
-	String title;	
-	String channelName;
-	int numberOfViews;
-	int duration;
+	private String subjectMatter;
+	private String title;	
+	private String channelName;
+	private int numberOfViews;
+	private int duration;
 	
 	//CONSTRUTOR DA CLASSE VIDEO
 	Video ( String vSubjectMatter, String vTitle, String vChannelName, int vNumberOfViews, int vDuration) {
