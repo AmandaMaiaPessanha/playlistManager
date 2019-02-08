@@ -1,33 +1,39 @@
 package PlayListMusic;
 
 public class Music {
+	//CARACTERÍSTICAS DA CLASSSE MUSIC
 	String name;
-	String compositor;
+	String composer;
 	String interpreter;
 	int durationInMinutes;
 	
+	//CONSTRUTOR DA CLASSE MUSIC
 	Music (String mName, String mCompositor, String mInterpreter, int mDuration) {
-		name = mName; compositor = mCompositor; interpreter = mInterpreter; durationInMinutes = mDuration;
+		name = mName; composer = mCompositor; interpreter = mInterpreter; durationInMinutes = mDuration;
+	}
+	
+	//GET DE NAME
+	public String getName() {
+		return this.name;
 	}
 
-	public String getCompositor() {
-		return compositor;
+	//GET DE COMPOSER
+	public String getComposer() {
+		return composer;
 	}
-
+	
+	//GET DE INTERPRETER
 	public String getInterpreter() {
 		return interpreter;
 	}
 
+	//GET DE DURATION
 	public int getDuration() {
 		return durationInMinutes;
 	}
 	
-	public String getName() {
-		return this.name;
-	}
-	
 	@Override
 	public String toString() {
-		return "Music name = " + this.name + ", compositor = " + this.compositor + ", interpreter = " + this.interpreter + ", duration = " + this.durationInMinutes + "]";
+		return "Music name = " + this.name + ", compositor = " + this.composer + ", interpreter = " + this.interpreter + ", duration = " + this.durationInMinutes;
 	}	
 }
