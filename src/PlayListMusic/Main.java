@@ -29,7 +29,7 @@ public class Main {
 		playlist1.addMusic(music3);
 		
 		System.out.println("===================================================");		
-		System.out.print("Duração da playlist: ");
+		System.out.print("Duração da playlist com as músicas: ");
 
 		//PRINTA NA TELA O TEMPO DE DURAÇÃO DA PLAYLIST
 		System.out.println(playlist1.toString());
@@ -53,7 +53,7 @@ public class Main {
 		playlist1.addVideo(video2);
 		
 		System.out.println("===================================================");		
-		System.out.print("Duração da playlist: ");
+		System.out.print("Duração da playlist com os vídeos: ");
 
 		//PRINTA NA TELA O TEMPO DE DURAÇÃO DA PLAYLIST
 		System.out.println(playlist1.toString());

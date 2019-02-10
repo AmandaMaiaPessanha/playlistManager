@@ -28,6 +28,6 @@ public class Music {
 	
 	@Override
 	public String toString() {
-		return "Music name = " + this.name + ", compositor = " + this.compositor + ", interpreter = " + this.interpreter + ", duration = " + this.durationInMinutes + "]";
+		return "Music inserida contém name = " + this.name + ", compositor = " + this.compositor + ", interpreter = " + this.interpreter + ", duration = " + this.durationInMinutes + "]";
 	}	
 }

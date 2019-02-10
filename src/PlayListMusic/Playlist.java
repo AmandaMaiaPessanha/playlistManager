@@ -16,6 +16,7 @@ public class Playlist {
 		this.musicCount = 0;
 		this.videoCount = 0;
 		this.duration = 0;
+		this.propaganda = 0;
 	}
 	
 	//INSERÇÃO DA MÚSICA NA PLAYLIST
@@ -35,7 +36,7 @@ public class Playlist {
 		//ADICIONA A DURAÇÃO DA MÚSICA NA PLAYLIST
 		this.duration += music.getDuration();
 		
-		//INCREMENTA OPERADOR ITENSCOUNT
+		//INCREMENTA OPERADOR MUSICCOUNT
 		this.musicCount++;
 	}
 	
@@ -55,8 +56,22 @@ public class Playlist {
 		
 		//ADICIONA A DURAÇÃO DA MÚSICA NA PLAYLIST
 		this.duration += video.getDuration();
-				
-		//INCREMENTA OPERADOR ITENSCOUNT
+		
+		//QUANDO RECEBER UM VIDEO IRÁ REALIZAR A LÓGICA DE ADIÇÃO DE PROPAGANDA
+		if (this.duration > 10000) {
+			//ACIMA DE 10000 VISUALIZAÇÕES, O ACRÉSCIMO É DE 5% NO TEMPO
+			this.propaganda = (this.duration * 5) / 100;
+			this.duration = this.duration + this.propaganda;
+		} else if (this.duration > 1000 && this.duration < 10000) {
+			//CASO O VÍDEO TENHA ENTRE 1000 E 10000 VISUALIZAÇÕES, HÁ UM ACRÉSCIMO DE 2% NO TEMPO DE PROPAGANDA
+			this.propaganda = (this.duration * 2) / 100;
+			this.duration = this.duration + this.propaganda;
+		} else {
+			//CASO O VÍDEO TENHA MENOS DE 1000 VISUALIZAÇÕES, NÃO HÁ TEMPO EXTRA DE PROPAGANDA 
+			this.propaganda = 0;
+		}
+		
+		//INCREMENTA OPERADOR VIDEOCOUNT
 		this.videoCount++;
 	}
 	
@@ -65,26 +80,6 @@ public class Playlist {
 		return this.duration;
 	}
 
-	//ADICIONAR PROGPAGANDAS AO LONGO DO VÍDEO
-	public int addPropaganda () {
-		
-		this.propaganda = 0;
-		
-		if (this.duration > 10000) {
-			//ACIMA DE 10000 VISUALIZAÇÕES, O ACRÉSCIMO É DE 5% NO TEMPO
-			this.duration = (this.duration * 5) / 100;
-		} else if (this.duration > 1000 && this.duration < 10000) {
-			//CASO O VÍDEO TENHA ENTRE 1000 E 10000 VISUALIZAÇÕES, HÁ UM ACRÉSCIMO DE 2% NO TEMPO DE PROPAGANDA
-			this.duration = (this.duration * 2) / 100;
-		} else {
-			//CASO O VÍDEO TENHA MENOS DE 1000 VISUALIZAÇÕES, NÃO HÁ TEMPO EXTRA DE PROPAGANDA 
-			this.propaganda = 0;
-		}
-		
-		return this.propaganda;
-		
-	}	
-	
 	//TOSTRING NO FORMATO (Xh e Ymin)
 	@Override
 	public String toString() {

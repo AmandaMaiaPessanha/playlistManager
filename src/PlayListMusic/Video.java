@@ -40,7 +40,7 @@ public class Video {
 
 	@Override
 	public String toString() {
-		return "Video title = " + title + ", subjectMatter = " + subjectMatter + ", channelName = " + channelName + ", numberOfViews = " + numberOfViews + ", duration = " + duration;
+		return "Video inserido contém: title = " + title + ", subjectMatter = " + subjectMatter + ", channelName = " + channelName + ", numberOfViews = " + numberOfViews + ", duration = " + duration;
 	}
 	
 
