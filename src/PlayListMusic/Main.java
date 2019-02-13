@@ -16,7 +16,7 @@ public class Main {
 		Playlist playlist1 = new Playlist();
 		
 		System.out.println("===================================================");
-		System.out.println("As músicas adicionadas foram: ");
+		System.out.println("As músicas foram: ");
 		
 		//PRINTA NA TELA AS INFORMÇÕES SOBRE CADA MPUSICA ADICIONADA
 		System.out.println(music1.toString());
@@ -42,7 +42,7 @@ public class Main {
 		video2 = new Video ("Musica", "Gangnam Style", "Officialpsy", 3276192, 252);
 		
 		System.out.println("===================================================");
-		System.out.println("Os vídeos adicionados foram: ");
+		System.out.println("Os vídeos foram: ");
 		
 		//PRINTA NA TELA AS INFORMÇÕES SOBRE CADA MPUSICA ADICIONADA
 		System.out.println(video1.toString());
