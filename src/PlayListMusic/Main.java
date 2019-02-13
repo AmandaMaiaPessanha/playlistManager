@@ -53,7 +53,7 @@ public class Main {
 		playlist1.addVideo(video2);
 		
 		System.out.println("===================================================");		
-		System.out.print("Duração da playlist com os vídeos, lembrando que os vídeos podem conter ou não propaganadas: ");
+		System.out.print("Duração da playlist com as músicas e os vídeos, lembrando que os vídeos podem conter ou não propaganadas: ");
 
 		//PRINTA NA TELA O TEMPO DE DURAÇÃO DA PLAYLIST
 		System.out.println(playlist1.toString());
