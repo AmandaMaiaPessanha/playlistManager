@@ -4,4 +4,11 @@
 		<item value="C:\Users\amand\eclipseProjects\playlistManager\src"/>
 		<item value="C:\Users\amand\eclipse-workspace\hello-word"/>
 	</list>
+	<section name="CleanDialogSettings">
+		<item value="500" key="DIALOG_WIDTH"/>
+		<item value="false" key="TOGGLE_SELECTED"/>
+		<item value="402" key="DIALOG_HEIGHT"/>
+		<item value="433" key="DIALOG_X_ORIGIN"/>
+		<item value="96" key="DIALOG_Y_ORIGIN"/>
+	</section>
 </section>
