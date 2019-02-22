@@ -58,15 +58,15 @@ public class Playlist {
 		this.duration += video.getDuration();
 		
 		//QUANDO RECEBER UM VIDEO IRÁ REALIZAR A LÓGICA DE ADIÇÃO DE PROPAGANDA
-		if (this.duration > 10000) {
+		if (this.duration => 10000) {
 			//ACIMA DE 10000 VISUALIZAÇÕES, O ACRÉSCIMO É DE 5% NO TEMPO
 			this.propaganda = (this.duration * 5) / 100;
 			this.duration = this.duration + this.propaganda;
-		} else if (this.duration > 1000 && this.duration < 10000) {
+		} else if (this.duration => 1000 && this.duration <= 10000) {
 			//CASO O VÍDEO TENHA ENTRE 1000 E 10000 VISUALIZAÇÕES, HÁ UM ACRÉSCIMO DE 2% NO TEMPO DE PROPAGANDA
 			this.propaganda = (this.duration * 2) / 100;
 			this.duration = this.duration + this.propaganda;
-		} else {
+		} else if (this.duration < 1000) {
 			//CASO O VÍDEO TENHA MENOS DE 1000 VISUALIZAÇÕES, NÃO HÁ TEMPO EXTRA DE PROPAGANDA 
 			this.propaganda = 0;
 		}
