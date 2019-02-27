@@ -1,7 +1,7 @@
 package PlayListMusic;
 
 public class Playlist  {
-	//CARACTERÕSTICAS DA CLASSSE PLAYLIST
+	//CARACTER√çSTICAS DA CLASSSE PLAYLIST
 	Music[] musics;
 	Video[] videos;
 	int musicCount;
@@ -19,9 +19,9 @@ public class Playlist  {
 		this.propaganda = 0;
 	}
 	
-	//INSER«√O DA M⁄SICA NA PLAYLIST
+	//INSER√á√ÉO DE UMA M√öSICA NA PLAYLIST
 	public void addMusic(Music music) {
-		//VERIFIca SE EST¡ NO TAMANHO M¡XIMO, SE SIM ADICIONA O MEU ARRAY J¡ EXISTENTE MAIS 1 POSI«’ES
+		//VERIFICA SE EST√Å NO TAMANHO M√ÅXIMO, SE SIM ADICIONA O MEU ARRAY QUE J√Å EXISTENTE MAIS 1 POSI√á√ÉO
 		if (this.musicCount == this.musics.length) {
 			Music[] newMusics = new Music[this.musicCount + 1];
 			for (int i = 0; i < this.musics.length; i++) {
@@ -30,19 +30,19 @@ public class Playlist  {
 			this.musics = newMusics;
 		}
 		
-		//ADICIONA NOVA M⁄SICA
+		//ADICIONA NOVA M√É≈°SICA
 		this.musics[this.musicCount] = music;
 		
-		//ADICIONA A DURA«√O DA M⁄SICA NA PLAYLIST
+		//ADICIONA A DURA√É‚Ä°√É∆íO DA M√É≈°SICA NA PLAYLIST
 		this.duration += music.getDuration();
 		
 		//INCREMENTA OPERADOR MUSICCOUNT
 		this.musicCount++;
 	}
 	
-	//INSER«√O DE UM VÕDEO NA PLAYLIST
+	//INSER√á√ÉO DE UM V√çDEO NA PLAYLIST
 	public void addVideo(Video video) {
-		//VERIFICA SE EST¡ NO TAMANHO M¡XIMO, SE SIM ADICIONA O MEU ARRAY J¡ EXISTENTE MAIS 1 POSI«’ES
+		//VERIFICA SE EST√Å NO TAMANHO M√ÅXIMO, SE SIM ADICIONA O MEU ARRAY QUE J√Å EXISTENTE MAIS 1 POSI√á√ÉO
 		if (this.videoCount == this.videos.length) {
 				Video[] newVideos = new Video[this.videoCount + 1];
 				for (int i = 0; i < this.videos.length; i++) {
@@ -51,23 +51,23 @@ public class Playlist  {
 				this.videos = newVideos;
 		}
 		
-		//ADICIONA NOVO VÕDEO
+		//ADICIONA NOVO V√ÉÔøΩDEO
 		this.videos[this.videoCount] = video;
 		
-		//ADICIONA A DURA«√O DA M⁄SICA NA PLAYLIST
+		//ADICIONA A DURA√É‚Ä°√É∆íO DA M√É≈°SICA NA PLAYLIST
 		this.duration += video.getDuration();
 		
-		//QUANDO RECEBER UM VIDEO IR¡ REALIZAR A L”GICA DE ADI«√O DE PROPAGANDA
+		//QUANDO RECEBER UM VIDEO IR√Å REALIZAR A L√ìGICA DE ADI√á√ÉO DE PROPAGANDA
 		if (this.duration >= 10000) {
-			//ACIMA DE 10000 VISUALIZA«’ES, O ACR…SCIMO … DE 5% NO TEMPO
+			//ACIMA DE 10000 VISUALIZA√á√ïES, O ACR√âSCIMO √â DE 5% NO TEMPO
 			this.propaganda = (this.duration * 5) / 100;
 			this.duration = this.duration + this.propaganda;
 		} else if (this.duration >= 1000 && this.duration <= 10000) {
-			//CASO O VÕDEO TENHA ENTRE 1000 E 10000 VISUALIZA«’ES, H¡ UM ACR…SCIMO DE 2% NO TEMPO DE PROPAGANDA
+			//CASO O V√çDEO TENHA ENTRE 1000 E 10000 VISUALIZA√á√ïES, H√Å UM ACR√âSCIMO DE 2% NO TEMPO DE PROPAGANDA
 			this.propaganda = (this.duration * 2) / 100;
 			this.duration = this.duration + this.propaganda;
 		} else if (this.duration < 1000) {
-			//CASO O VÕDEO TENHA MENOS DE 1000 VISUALIZA«’ES, N√O H¡ TEMPO EXTRA DE PROPAGANDA 
+			//CASO O V√çDEO TENHA MENOS DE 1000 VISUALIZA√á√ïES, N√ÉO H√Å TEMPO EXTRA DE PROPAGANDA 
 			this.propaganda = 0;
 		}
 		
@@ -75,7 +75,7 @@ public class Playlist  {
 		this.videoCount++;
 	}
 	
-	//OBTEN«√O DA DURA«√O DA PLAYLIST
+	//OBTEN√É‚Ä°√É∆íO DA DURA√É‚Ä°√É∆íO DA PLAYLIST
 	public int getDuration() {
 		return this.duration;
 	}
