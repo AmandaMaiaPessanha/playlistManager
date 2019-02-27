@@ -1,13 +1,15 @@
 package PlayListMusic;
 
-public class Music {
-	private String name;
+public class Music extends Entertainment  {
+	//private String name;
+	Entertainment[] entertainment;
 	private String compositor;
 	private String interpreter;
-	private int durationInMinutes;
-	
-	Music (String mName, String mCompositor, String mInterpreter, int mDuration) {
-		name = mName; compositor = mCompositor; interpreter = mInterpreter; durationInMinutes = mDuration;
+	//private int durationInMinutes; 
+		
+	Music (String mCompositor, String mInterpreter) {
+		super(name, duration);
+		compositor = mCompositor; interpreter = mInterpreter;
 	}
 
 	public String getCompositor() {
@@ -18,16 +20,16 @@ public class Music {
 		return interpreter;
 	}
 
-	public int getDuration() {
-		return durationInMinutes;
-	}
+	//public int getDuration() {
+	//	return durationInMinutes;
+	//}
 	
-	public String getName() {
-		return this.name;
-	}
+	//public String getName() {
+	//	return this.name;
+	//}
 	
 	@Override
 	public String toString() {
-		return "Music inserida contém name = " + this.name + ", compositor = " + this.compositor + ", interpreter = " + this.interpreter + ", duration = " + this.durationInMinutes + "]";
+		return "Music inserida contém compositor = " + this.compositor + ", interpreter = " + this.interpreter;
 	}	
 }
