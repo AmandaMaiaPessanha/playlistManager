@@ -1,35 +1,33 @@
 package PlayListMusic;
 
-public class Music extends Entertainment  {
-	//private String name;
-	Entertainment[] entertainment;
-	private String compositor;
+public class Music extends Entertainment {
+	private String composer;
 	private String interpreter;
-	//private int durationInMinutes; 
 		
-	Music (String mCompositor, String mInterpreter) {
-		super(name, duration);
-		compositor = mCompositor; interpreter = mInterpreter;
+	public Music (String mName,  String mComposer, String mInterpreter, int mDuration) {
+		super(mName, mDuration);
+		name = mName; composer = mComposer; interpreter = mInterpreter; duration = mDuration;
+	}
+	
+
+	public String getName() {
+		return this.name;
 	}
 
 	public String getCompositor() {
-		return compositor;
+		return this.composer;
 	}
 
 	public String getInterpreter() {
-		return interpreter;
+		return this.interpreter;
 	}
 
-	//public int getDuration() {
-	//	return durationInMinutes;
-	//}
-	
-	//public String getName() {
-	//	return this.name;
-	//}
+	public int getDuration() {
+		return this.duration;
+	}
 	
 	@Override
 	public String toString() {
-		return "Music inserida contém compositor = " + this.compositor + ", interpreter = " + this.interpreter;
+		return "Music inserida contém: " + "name = " + this.name + ", compositor = " + this.composer + ", interpreter = " + this.interpreter + ", duration = " + this.duration;
 	}	
 }

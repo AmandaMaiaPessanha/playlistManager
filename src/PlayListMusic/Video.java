@@ -2,48 +2,45 @@ package PlayListMusic;
 
 public class Video extends Entertainment {
 	//CARACTERÍSTICAS DA CLASSSE VIDEO
-	//private String title;
-	Entertainment[] entertainment;
 	private String subjectMatter;
 	private String channelName;
 	private int numberOfViews;
-	//private int duration;
 	
 	
 	//CONSTRUTOR DA CLASSE VIDEO
-	Video (Entertainment name, String vSubjectMatter, String vChannelName, int vNumberOfViews, Entertainment duration) {
-		super(name, duration);
-		subjectMatter = vSubjectMatter; channelName = vChannelName; numberOfViews = vNumberOfViews;
+	public Video ( String vSubjectMatter, String vTitle, String vChannelName, int vNumberOfViews, int vDuration) {
+		super(vTitle, vDuration);
+		subjectMatter = vSubjectMatter; name = vTitle; channelName = vChannelName; numberOfViews = vNumberOfViews; duration = vDuration;
+	}
+	
+	//GET DE TITLE
+	public String getTitle() {
+		return this.name;
 	}
 	
 	//GET DE SUBJECT MATTER
 	public String getSubjectMatter() {
-		return subjectMatter;
+		return this.subjectMatter;
 	}
 	
-	//GET DE TITLE
-	//public String getTitle() {
-	//	return title;
-	//}
-
 	//GET DE CHANNEL NAME
 	public String getChannelName() {
-		return channelName;
+		return this.channelName;
 	}
 
 	//GET DE NUMBER OF VIEWS
 	public int getNumberOfViews() {
-		return numberOfViews;
+		return this.numberOfViews;
 	}
 
 	//GET DE DURATION
-	//public int getDuration() {
-	//	return duration;
-	//	}
+	public int getDuration() {
+		return this.duration;
+	}
 
 	@Override
 	public String toString() {
-		return "Video inserido contém: subjectMatter = " + subjectMatter + ", channelName = " + channelName + ", numberOfViews = " + numberOfViews;
+		return "Video inserido contém: " + "title = " + this.name + ", subjectMatter = " + this.subjectMatter + ", channelName = " + this.channelName + ", numberOfViews = " + this.numberOfViews + ", duration = " + this.duration;
 	}
 	
 

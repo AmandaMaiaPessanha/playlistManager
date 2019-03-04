@@ -1,84 +1,71 @@
 package PlayListMusic;
 
-public class Playlist  {
+public class Playlist {
 	//CARACTERÍSTICAS DA CLASSSE PLAYLIST
-	Music[] musics;
-	Video[] videos;
-	int musicCount;
-	int videoCount;
+	Entertainment[] entertainment;
+	int entertainmentCount;
 	int duration;
-	int propaganda;
+	int advertising;
+	int addAdvertising;
 	
 	//CONSTRUTOR DA CLASSE PLAYLIST
-	Playlist (){	
-		this.musics = new Music[1];
-		this.videos = new Video[1];
-		this.musicCount = 0;
-		this.videoCount = 0;
+	Playlist (){
+		this.entertainment = new Entertainment[1];
+		this.entertainmentCount = 0;
 		this.duration = 0;
-		this.propaganda = 0;
+		this.advertising = 0;
+		this.addAdvertising = 0;
 	}
-	
-	//INSERÇÃO DE UMA MÚSICA NA PLAYLIST
-	public void addMusic(Music music) {
+
+	//INSERÇÃO DE UM ENTRETERIMENTO NA PLAYLIST
+	public void addEntertainment (Entertainment entertainment) {
+		
 		//VERIFICA SE ESTÁ NO TAMANHO MÁXIMO, SE SIM ADICIONA O MEU ARRAY QUE JÁ EXISTENTE MAIS 1 POSIÇÃO
-		if (this.musicCount == this.musics.length) {
-			Music[] newMusics = new Music[this.musicCount + 1];
-			for (int i = 0; i < this.musics.length; i++) {
-				newMusics[i] = this.musics[i];
+		if (this.entertainmentCount == this.entertainment.length) {
+			Entertainment[] newEntertainment = new Entertainment[this.entertainmentCount + 1];
+			for (int i = 0; i < this.entertainment.length; i++) {
+				newEntertainment[i] = this.entertainment[i];
 			}
-			this.musics = newMusics;
+			this.entertainment = newEntertainment;
 		}
 		
-		//ADICIONA NOVA MÃšSICA
-		this.musics[this.musicCount] = music;
+		//ADICIONA NOVO ENTRETERIMENTO
+		this.entertainment[this.entertainmentCount] = entertainment;
 		
-		//ADICIONA A DURAÃ‡ÃƒO DA MÃšSICA NA PLAYLIST
-		this.duration += music.getDuration();
+		//ADICIONA A DURAÇÃO DO ENTRETERIMENTO NA PLAYLIST
+		this.duration += entertainment.getDuration();
 		
-		//INCREMENTA OPERADOR MUSICCOUNT
-		this.musicCount++;
-	}
-	
-	//INSERÇÃO DE UM VÍDEO NA PLAYLIST
-	public void addVideo(Video video) {
-		//VERIFICA SE ESTÁ NO TAMANHO MÁXIMO, SE SIM ADICIONA O MEU ARRAY QUE JÁ EXISTENTE MAIS 1 POSIÇÃO
-		if (this.videoCount == this.videos.length) {
-				Video[] newVideos = new Video[this.videoCount + 1];
-				for (int i = 0; i < this.videos.length; i++) {
-					newVideos[i] = this.videos[i];
-				}
-				this.videos = newVideos;
-		}
+		//INCREMENTA OPERADOR ENTERTAINMENTCOUNT
+		this.entertainmentCount++;
 		
-		//ADICIONA NOVO VÃ�DEO
-		this.videos[this.videoCount] = video;
-		
-		//ADICIONA A DURAÃ‡ÃƒO DA MÃšSICA NA PLAYLIST
-		this.duration += video.getDuration();
+		//OBTÉM O NÚMERO DE VISUALIZAÇÕES
+		//this.advertising = entertainment;
 		
 		//QUANDO RECEBER UM VIDEO IRÁ REALIZAR A LÓGICA DE ADIÇÃO DE PROPAGANDA
-		if (this.duration >= 10000) {
+		if (this.advertising >= 10000) {
 			//ACIMA DE 10000 VISUALIZAÇÕES, O ACRÉSCIMO É DE 5% NO TEMPO
-			this.propaganda = (this.duration * 5) / 100;
-			this.duration = this.duration + this.propaganda;
-		} else if (this.duration >= 1000 && this.duration <= 10000) {
+			this.addAdvertising = (this.duration * 5) / 100;
+			this.duration = this.duration + this.addAdvertising;
+		} else if (this.advertising >= 1000 && this.advertising <= 10000) {
 			//CASO O VÍDEO TENHA ENTRE 1000 E 10000 VISUALIZAÇÕES, HÁ UM ACRÉSCIMO DE 2% NO TEMPO DE PROPAGANDA
-			this.propaganda = (this.duration * 2) / 100;
-			this.duration = this.duration + this.propaganda;
-		} else if (this.duration < 1000) {
+			this.addAdvertising = (this.duration * 2) / 100;
+			this.duration = this.duration + this.addAdvertising;
+		} else if (this.advertising < 1000) {
 			//CASO O VÍDEO TENHA MENOS DE 1000 VISUALIZAÇÕES, NÃO HÁ TEMPO EXTRA DE PROPAGANDA 
-			this.propaganda = 0;
+			this.addAdvertising = 0;
 		}
-		
-		//INCREMENTA OPERADOR VIDEOCOUNT
-		this.videoCount++;
+			
 	}
 	
-	//OBTENÃ‡ÃƒO DA DURAÃ‡ÃƒO DA PLAYLIST
+	//OBTÉM A DURAÇÃO DA PLAYLIST
 	public int getDuration() {
 		return this.duration;
 	}
+	
+	//OBTÉM O NÚMERO DE VISUALIZAÇÕES
+	//public int getNumberOfViews() {
+	//	return this.advertising;
+	//}
 
 	//TOSTRING NO FORMATO (Xh e Ymin)
 	@Override

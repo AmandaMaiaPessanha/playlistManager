@@ -2,24 +2,19 @@ package PlayListMusic;
 
 public class Entertainment {
 	
-	//DECLARAÇÃO DAS VARIÁVEIS DE USO COMUM PARA MÚSICA E VÍDEO.
-	protected static Entertainment name;
-	protected static Entertainment duration;
+	//DECLARAÇÃO DAS VARIÁVEIS DE USO COMUM PARA MÚSICA E VÍDEO, TAMBÉM UM VARIÁVEL PARA INDICAR COM O TYPE DO QUE SERÁ INSERIDO.
+	public String name;
+	public int duration;
 	
-	Entertainment (Entertainment eName, Entertainment eDuration) {
+	Entertainment (String eName, int eDuration) {
 		name = eName; duration = eDuration;
 	}
-	
-	public Entertainment getName() {
-		return name;
+
+	public String getName() {
+		return this.name;
 	}
 	
-	public Entertainment getDuration() {
-		return duration;
-	}
-	
-	@Override
-	public String toString() {
-		return "Entertainment name=" + name + ", duration=" + duration + "]";
+	public int getDuration() {
+		return this.duration;
 	}
 }
