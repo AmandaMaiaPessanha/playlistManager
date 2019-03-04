@@ -14,9 +14,9 @@ public class Main {
 		Playlist playlist1 = new Playlist();
 			
 		//ATRIBUI OS NOVOS OBJETOS MUSIC NAS SUAS RESPECTIVASA VARIÁVEIS
-		musics[0] = new Music("Agua de beber", "Antonio Carlos Jobim", "Astrud Gilberto", 140);
-		musics[1] = new Music ("O mar serenou", "Candeia", "Clara Nunes", 179);
-		musics[2] = new Music ("Rapaz Folgado", "Noel Rosa", "Martinho da vila e Mart'nália", 180);
+		musics[0] = new Music("Agua de beber", "Antonio Carlos Jobim", "Astrud Gilberto", 140, 0);
+		musics[1] = new Music ("O mar serenou", "Candeia", "Clara Nunes", 179, 0);
+		musics[2] = new Music ("Rapaz Folgado", "Noel Rosa", "Martinho da vila e Mart'nália", 180, 0);
 		
 		//ATRIBUI OS NOVOS OBJETOS MUSIC NAS SUAS RESPECTIVASA VARIÁVEIS
 		videos[0] = new Video ( "Musica", "Despacito", "Luis Fonsi", 5926796, 280);
@@ -38,7 +38,7 @@ public class Main {
 		System.out.println("Duração da playlist com as músicas: " + playlist1.toString());
 		
 		System.out.println("===================================================");
-		System.out.println("Os vídeos foram: ");
+		System.out.println("Os vídeos adicionados foram: ");
 		
 		for (int i = 0; i < 2; i++) {
 			//PRINTA NA TELA AS INFORMÇÕES SOBRE CADA MPUSICA ADICIONADA

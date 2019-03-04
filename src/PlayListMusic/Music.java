@@ -4,8 +4,8 @@ public class Music extends Entertainment {
 	private String composer;
 	private String interpreter;
 		
-	public Music (String mName,  String mComposer, String mInterpreter, int mDuration) {
-		super(mName, mDuration);
+	public Music (String mName,  String mComposer, String mInterpreter, int mDuration, int mViews) {
+		super(mName, mDuration, mViews);
 		name = mName; composer = mComposer; interpreter = mInterpreter; duration = mDuration;
 	}
 	

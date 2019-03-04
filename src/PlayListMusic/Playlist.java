@@ -37,9 +37,9 @@ public class Playlist {
 		
 		//INCREMENTA OPERADOR ENTERTAINMENTCOUNT
 		this.entertainmentCount++;
-		
+				
 		//OBTÉM O NÚMERO DE VISUALIZAÇÕES
-		//this.advertising = entertainment;
+		this.advertising = entertainment.views;
 		
 		//QUANDO RECEBER UM VIDEO IRÁ REALIZAR A LÓGICA DE ADIÇÃO DE PROPAGANDA
 		if (this.advertising >= 10000) {
@@ -61,11 +61,6 @@ public class Playlist {
 	public int getDuration() {
 		return this.duration;
 	}
-	
-	//OBTÉM O NÚMERO DE VISUALIZAÇÕES
-	//public int getNumberOfViews() {
-	//	return this.advertising;
-	//}
 
 	//TOSTRING NO FORMATO (Xh e Ymin)
 	@Override
