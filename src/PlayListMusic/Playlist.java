@@ -1,6 +1,7 @@
 package PlayListMusic;
 
 public class Playlist {
+	
 	//CARACTERÍSTICAS DA CLASSSE PLAYLIST
 	Entertainment[] entertainment;
 	int entertainmentCount;
@@ -17,7 +18,7 @@ public class Playlist {
 		this.addAdvertising = 0;
 	}
 
-	//INSERÇÃO DE UM ENTRETERIMENTO NA PLAYLIST
+	//INSERÇÃO DE UM ENTRETERIMENTO NA PLAYLIST, QUE PODE SER MÚSICA OU VÍDEO
 	public void addEntertainment (Entertainment entertainment) {
 		
 		//VERIFICA SE ESTÁ NO TAMANHO MÁXIMO, SE SIM ADICIONA O MEU ARRAY QUE JÁ EXISTENTE MAIS 1 POSIÇÃO
@@ -29,7 +30,7 @@ public class Playlist {
 			this.entertainment = newEntertainment;
 		}
 		
-		//ADICIONA NOVO ENTRETERIMENTO
+		//ADICIONA UM NOVO ENTRETERIMENTO
 		this.entertainment[this.entertainmentCount] = entertainment;
 		
 		//ADICIONA A DURAÇÃO DO ENTRETERIMENTO NA PLAYLIST
@@ -39,7 +40,7 @@ public class Playlist {
 		this.entertainmentCount++;
 				
 		//OBTÉM O NÚMERO DE VISUALIZAÇÕES
-		this.advertising = entertainment.views;
+		this.advertising = entertainment.getViews();
 		
 		//QUANDO RECEBER UM VIDEO IRÁ REALIZAR A LÓGICA DE ADIÇÃO DE PROPAGANDA
 		if (this.advertising >= 10000) {
@@ -55,11 +56,6 @@ public class Playlist {
 			this.addAdvertising = 0;
 		}
 			
-	}
-	
-	//OBTÉM A DURAÇÃO DA PLAYLIST
-	public int getDuration() {
-		return this.duration;
 	}
 
 	//TOSTRING NO FORMATO (Xh e Ymin)

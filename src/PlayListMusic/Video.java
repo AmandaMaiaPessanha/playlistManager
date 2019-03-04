@@ -1,10 +1,10 @@
 package PlayListMusic;
 
 public class Video extends Entertainment {
+	
 	//CARACTERÍSTICAS DA CLASSSE VIDEO
 	private String subjectMatter;
 	private String channelName;
-	//private int numberOfViews;
 	
 	
 	//CONSTRUTOR DA CLASSE VIDEO
