@@ -2,7 +2,7 @@ package PlayListMusic;
 
 public class Entertainment {
 	
-	//DECLARAÇÃO DAS VARIÁVEIS DE USO COMUM PARA MÚSICA E VÍDEO.
+	//DECLARACAO DAS VARIAVEIS DE USO COMUM PARA MUSICA E VIDEO.
 	public String name;
 	public int duration;
 	public int views;

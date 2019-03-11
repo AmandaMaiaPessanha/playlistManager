@@ -2,7 +2,7 @@ package PlayListMusic;
 
 public class Playlist {
 	
-	//CARACTERÍSTICAS DA CLASSSE PLAYLIST
+	//CARACTERISTICAS DA CLASSSE PLAYLIST
 	Entertainment[] entertainment;
 	int entertainmentCount;
 	int duration;
@@ -18,10 +18,10 @@ public class Playlist {
 		this.addAdvertising = 0;
 	}
 
-	//INSERÇÃO DE UM ENTRETERIMENTO NA PLAYLIST, QUE PODE SER MÚSICA OU VÍDEO
+	//INSERCAO DE UM ENTRETERIMENTO NA PLAYLIST, QUE PODE SER MUSICA OU VIDEO
 	public void addEntertainment (Entertainment entertainment) {
 		
-		//VERIFICA SE ESTÁ NO TAMANHO MÁXIMO, SE SIM ADICIONA O MEU ARRAY QUE JÁ EXISTENTE MAIS 1 POSIÇÃO
+		//VERIFICA SE ESTA NO TAMANHO MAXIMO, SE SIM ADICIONA O MEU ARRAY QUE JA EXISTENTE MAIS 1 POSICAO
 		if (this.entertainmentCount == this.entertainment.length) {
 			Entertainment[] newEntertainment = new Entertainment[this.entertainmentCount + 1];
 			for (int i = 0; i < this.entertainment.length; i++) {
@@ -39,20 +39,20 @@ public class Playlist {
 		//INCREMENTA OPERADOR ENTERTAINMENTCOUNT
 		this.entertainmentCount++;
 				
-		//OBTÉM O NÚMERO DE VISUALIZAÇÕES
+		//OBTEM O NUMERO DE VISUALIZACOES
 		this.advertising = entertainment.getViews();
 		
-		//QUANDO RECEBER UM VIDEO IRÁ REALIZAR A LÓGICA DE ADIÇÃO DE PROPAGANDA
+		//QUANDO RECEBER UM VIDEO IRA REALIZAR A LOGICA DE ADICAO DE PROPAGANDA
 		if (this.advertising >= 10000) {
-			//ACIMA DE 10000 VISUALIZAÇÕES, O ACRÉSCIMO É DE 5% NO TEMPO
+			//ACIMA DE 10000 VISUALIZACOES, O ACRESCIMO E DE 5% NO TEMPO
 			this.addAdvertising = (this.duration * 5) / 100;
 			this.duration = this.duration + this.addAdvertising;
 		} else if (this.advertising >= 1000 && this.advertising <= 10000) {
-			//CASO O VÍDEO TENHA ENTRE 1000 E 10000 VISUALIZAÇÕES, HÁ UM ACRÉSCIMO DE 2% NO TEMPO DE PROPAGANDA
+			//CASO O VIDEO TENHA ENTRE 1000 E 10000 VISUALIZACOES, HA UM ACRESCIMO DE 2% NO TEMPO DE PROPAGANDA
 			this.addAdvertising = (this.duration * 2) / 100;
 			this.duration = this.duration + this.addAdvertising;
 		} else if (this.advertising < 1000) {
-			//CASO O VÍDEO TENHA MENOS DE 1000 VISUALIZAÇÕES, NÃO HÁ TEMPO EXTRA DE PROPAGANDA 
+			//CASO O VIDEO TENHA MENOS DE 1000 VISUALIZACOES, NAO HA TEMPO EXTRA DE PROPAGANDA 
 			this.addAdvertising = 0;
 		}
 			

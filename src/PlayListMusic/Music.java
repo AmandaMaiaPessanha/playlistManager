@@ -2,9 +2,9 @@ package PlayListMusic;
 
 public class Music extends Entertainment {
 	
-	//CARACTERÍSTICAS DA CLASSSE MUSIC
-	private String composer;
-	private String interpreter;
+	//CARACTERISTICAS DA CLASSSE MUSIC
+	public String composer;
+	public String interpreter;
 	
 	//CONSTRUTOR DA CLASSE MUSIC
 	public Music (String mName,  String mComposer, String mInterpreter, int mDuration, int mViews) {
