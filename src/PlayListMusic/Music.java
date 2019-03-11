@@ -7,8 +7,8 @@ public class Music extends Entertainment {
 	public String interpreter;
 	
 	//CONSTRUTOR DA CLASSE MUSIC
-	public Music (String mName,  String mComposer, String mInterpreter, int mDuration, int mViews) {
-		super(mName, mDuration, mViews);
+	public Music (String mName,  String mComposer, String mInterpreter, int mDuration) {
+		super(mName, mDuration);
 		name = mName; composer = mComposer; interpreter = mInterpreter; duration = mDuration;
 	}
 	
@@ -34,6 +34,6 @@ public class Music extends Entertainment {
 	
 	@Override
 	public String toString() {
-		return "Music inserida contém: " + "name = " + this.name + ", compositor = " + this.composer + ", interpreter = " + this.interpreter + ", duration = " + this.duration;
+		return "Music inserida contÃ©m: " + "name = " + this.name + ", compositor = " + this.composer + ", interpreter = " + this.interpreter + ", duration = " + this.duration;
 	}	
 }
