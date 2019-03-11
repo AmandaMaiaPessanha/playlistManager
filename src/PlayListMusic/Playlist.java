@@ -40,7 +40,7 @@ public class Playlist {
 		this.entertainmentCount++;
 				
 		//OBTEM O NUMERO DE VISUALIZACOES
-		this.advertising = (entertainment as Video).getViews();
+		this.advertising = ((Video)entertainment).getViews();
 		
 		//QUANDO RECEBER UM VIDEO IRA REALIZAR A LOGICA DE ADICAO DE PROPAGANDA
 		if (this.advertising >= 10000) {
