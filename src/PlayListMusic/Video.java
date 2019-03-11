@@ -5,11 +5,12 @@ public class Video extends Entertainment {
 	//CARACTERISTICAS DA CLASSSE VIDEO
 	public String subjectMatter;
 	public String channelName;
+	public int views;
 	
 	
 	//CONSTRUTOR DA CLASSE VIDEO
 	public Video ( String vSubjectMatter, String vTitle, String vChannelName, int vViews, int vDuration) {
-		super(vTitle, vDuration, vViews);
+		super(vTitle, vDuration);
 		subjectMatter = vSubjectMatter; name = vTitle; channelName = vChannelName; views = vViews; duration = vDuration;
 	}
 	
@@ -29,7 +30,7 @@ public class Video extends Entertainment {
 	}
 
 	//GET DE NUMBER OF VIEWS
-	public int getNumberOfViews() {
+	public int getViews() {
 		return this.views;
 	}
 
@@ -40,7 +41,7 @@ public class Video extends Entertainment {
 
 	@Override
 	public String toString() {
-		return "Video inserido contém: " + "title = " + this.name + ", subjectMatter = " + this.subjectMatter + ", channelName = " + this.channelName + ", numberOfViews = " + this.views + ", duration = " + this.duration;
+		return "Video inserido contÃ©m: " + "title = " + this.name + ", subjectMatter = " + this.subjectMatter + ", channelName = " + this.channelName + ", numberOfViews = " + this.views + ", duration = " + this.duration;
 	}
 	
 
